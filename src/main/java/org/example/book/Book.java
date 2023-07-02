@@ -8,7 +8,20 @@ public class Book {
         private String subGenre;
         private String publisher;
 
-        public int getNumber() {
+    public Book(int number, String title, String author, String genre, String subGenre, String publisher) {
+        this.number = number;
+        this.author = author;
+        this.title = title;
+        this.genre = genre;
+        this.subGenre = subGenre;
+        this.publisher = publisher;
+    }
+
+    public Book() {
+
+    }
+
+    public int getNumber() {
             return number;
         }
 
