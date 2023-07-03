@@ -2,7 +2,9 @@ package org.example;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import org.example.admin.Admin;
 import org.example.book.Book;
+import org.example.user.User;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -16,7 +18,7 @@ public class Library {
 
     public static void main(String[] args) {
         System.out.println("Welcome to the Library!");
-        System.out.println("Please enter '1' for User or '2' for Admin");
+        System.out.println("Please enter '1' for User access OR '2' for Admin access");
 
         Scanner userInput = new Scanner(System.in);
         int choice = userInput.nextInt();
@@ -25,7 +27,8 @@ public class Library {
             // User operations
             System.out.println("Welcome, User!");
             // Implement user-related functionality here
-            viewAllBooks();
+            User user = new User();
+            user.userSelection();
         } else if (choice == 2) {
             // Admin operations
             System.out.println("Enter the admin password: ");
@@ -34,7 +37,8 @@ public class Library {
             if (password.equals("abcdefg")) {
                 System.out.println("Welcome, Admin!");
                 // Implement admin-related functionality here
-                viewAllBooks();
+                Admin admin = new Admin();
+                admin.adminSelection();
             } else {
                 System.out.println("Incorrect password. Access denied");
             }
@@ -44,7 +48,7 @@ public class Library {
         }
     }
 
-    private static void viewAllBooks() {
+    public static void viewAllBooks() {
         try (FileReader fileReader = new FileReader(BOOKS_FILE)) {
             Book[] booksArray = gson.fromJson(fileReader, Book[].class);
             List<Book> books = Arrays.asList(booksArray);
@@ -56,5 +60,74 @@ public class Library {
         } catch (IOException e) {
             System.out.println("Error reading books file: " + e.getMessage());
         }
+    }
+
+    public void viewAvailableBooks() {
+        // Implement the logic to view available books
+        System.out.println("Viewing available books...");
+    }
+
+    public void viewBooksByCategory() {
+        System.out.println("Please select a category:");
+        System.out.println("1: Non-Fiction");
+        System.out.println("2: Fiction");
+        System.out.println("3: Tech");
+        System.out.println("4: Science");
+        System.out.println("5: History");
+        System.out.println("6: Philosophy");
+
+        Scanner userInput = new Scanner(System.in);
+        int categoryOption = userInput.nextInt();
+
+        switch (categoryOption) {
+            case 1:
+                // Non-Fiction
+                getBooksByCategory("Non-Fiction");
+                break;
+            case 2:
+                // Fiction
+                getBooksByCategory("Fiction");
+                break;
+            case 3:
+                // Tech
+                getBooksByCategory("Tech");
+                break;
+            case 4:
+                // Science
+                getBooksByCategory("Science");
+                break;
+            case 5:
+                // History
+                getBooksByCategory("History");
+                break;
+            case 6:
+                // Philosophy
+                getBooksByCategory("Philosophy");
+                break;
+            default:
+                System.out.println("Invalid category option. Please try again.");
+                viewBooksByCategory();
+                break;
+        }
+    }
+
+    public void getBooksByCategory(String category) {
+        try (FileReader fileReader = new FileReader(BOOKS_FILE)) {
+            Book[] booksArray = gson.fromJson(fileReader, Book[].class);
+            List<Book> books = Arrays.asList(booksArray);
+
+            System.out.println("Books in the category \"" + category + "\":");
+            for (Book book : books) {
+                if (book.getGenre().equalsIgnoreCase(category)) {
+                    System.out.println(book);
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Error reading books file: " + e.getMessage());
+        }
+    }
+
+
+    public void viewBooksByCategory(String category) {
     }
 }

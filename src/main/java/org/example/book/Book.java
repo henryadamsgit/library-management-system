@@ -76,8 +76,8 @@ public class Book {
         return number + ". " + "\'" +
                 title + '\'' + " by " +
                 author + "." +
-                " {" + genre + "/" + subGenre + ". " +
+                " Category: " + genre + "/" + subGenre + ". " +
                 "Published by " +
-                 publisher + '\'' + ".}";
+                 publisher + ".";
     }
     }
