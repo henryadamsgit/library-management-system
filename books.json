@@ -5,7 +5,9 @@
     "author": "Goswami, Jaideva",
     "genre": "tech",
     "subGenre": "signal_processing",
-    "publisher": "Wiley"
+    "publisher": "Wiley",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 2,
@@ -13,7 +15,9 @@
     "author": "Foreman, John",
     "genre": "tech",
     "subGenre": "data_science",
-    "publisher": "Wiley"
+    "publisher": "Wiley",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 3,
@@ -21,7 +25,9 @@
     "author": "Hawking, Stephen",
     "genre": "tech",
     "subGenre": "mathematics",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 4,
@@ -29,7 +35,9 @@
     "author": "Dubner, Stephen",
     "genre": "science",
     "subGenre": "economics",
-    "publisher": "HarperCollins"
+    "publisher": "HarperCollins",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 5,
@@ -37,7 +45,9 @@
     "author": "Said, Edward",
     "genre": "nonfiction",
     "subGenre": "history",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 6,
@@ -45,7 +55,9 @@
     "author": "Vapnik, Vladimir",
     "genre": "tech",
     "subGenre": "data_science",
-    "publisher": "Springer"
+    "publisher": "Springer",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 7,
@@ -53,7 +65,9 @@
     "author": "Menon, V P",
     "genre": "nonfiction",
     "subGenre": "history",
-    "publisher": "Orient Blackswan"
+    "publisher": "Orient Blackswan",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 8,
@@ -61,7 +75,9 @@
     "author": "Mlodinow, Leonard",
     "genre": "science",
     "subGenre": "mathematics",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 9,
@@ -69,7 +85,9 @@
     "author": "Shih, Frank",
     "genre": "tech",
     "subGenre": "signal_processing",
-    "publisher": "CRC"
+    "publisher": "CRC",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 10,
@@ -77,7 +95,9 @@
     "author": "Konnikova, Maria",
     "genre": "nonfiction",
     "subGenre": "psychology",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 11,
@@ -85,7 +105,9 @@
     "author": "Sebastian Gutierrez",
     "genre": "tech",
     "subGenre": "data_science",
-    "publisher": "Apress"
+    "publisher": "Apress",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 12,
@@ -93,7 +115,9 @@
     "author": "Vonnegut, Kurt",
     "genre": "fiction",
     "subGenre": "classic",
-    "publisher": "Random House"
+    "publisher": "Random House",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 13,
@@ -101,7 +125,9 @@
     "author": "Villani, Cedric",
     "genre": "science",
     "subGenre": "mathematics",
-    "publisher": "Bodley Head"
+    "publisher": "Bodley Head",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 14,
@@ -109,7 +135,9 @@
     "author": "Sussman, Gerald",
     "genre": "tech",
     "subGenre": "computer_science",
-    "publisher": "MIT Press"
+    "publisher": "MIT Press",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 15,
@@ -117,7 +145,9 @@
     "author": "Eraly, Abraham",
     "genre": "nonfiction",
     "subGenre": "history",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 16,
@@ -125,7 +155,9 @@
     "author": "Kafka, Frank",
     "genre": "fiction",
     "subGenre": "classic",
-    "publisher": "Random House"
+    "publisher": "Random House",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 17,
@@ -133,7 +165,9 @@
     "author": "Pratt, John",
     "genre": "tech",
     "subGenre": "data_science",
-    "publisher": "MIT Press"
+    "publisher": "MIT Press",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 18,
@@ -141,7 +175,9 @@
     "author": "Nisbet, Robert",
     "genre": "tech",
     "subGenre": "data_science",
-    "publisher": "Apress"
+    "publisher": "Apress",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 19,
@@ -149,7 +185,9 @@
     "author": "Wells, H. G.",
     "genre": "fiction",
     "subGenre": "novel",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 20,
@@ -157,7 +195,9 @@
     "author": "Heisenberg, Werner",
     "genre": "philosophy",
     "subGenre": "science",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 21,
@@ -165,7 +205,9 @@
     "author": "Oram, Andy",
     "genre": "tech",
     "subGenre": "computer_science",
-    "publisher": "O\u0027Reilly"
+    "publisher": "O\u0027Reilly",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 22,
@@ -173,7 +215,9 @@
     "author": "Tao, Terence",
     "genre": "tech",
     "subGenre": "mathematics",
-    "publisher": "HBA"
+    "publisher": "HBA",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 23,
@@ -181,7 +225,9 @@
     "author": "Conway, Drew",
     "genre": "tech",
     "subGenre": "data_science",
-    "publisher": "O\u0027Reilly"
+    "publisher": "O\u0027Reilly",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 24,
@@ -189,7 +235,9 @@
     "author": "Silver, Nate",
     "genre": "tech",
     "subGenre": "data_science",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 25,
@@ -197,7 +245,9 @@
     "author": "McKinney, Wes",
     "genre": "tech",
     "subGenre": "data_science",
-    "publisher": "O\u0027Reilly"
+    "publisher": "O\u0027Reilly",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 26,
@@ -205,7 +255,9 @@
     "author": "Cormen, Thomas",
     "genre": "tech",
     "subGenre": "computer_science",
-    "publisher": "MIT Press"
+    "publisher": "MIT Press",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 27,
@@ -213,7 +265,9 @@
     "author": "Deb, Siddhartha",
     "genre": "nonfiction",
     "subGenre": "history",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 28,
@@ -221,7 +275,9 @@
     "author": "Camus, Albert",
     "genre": "fiction",
     "subGenre": "classic",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 29,
@@ -229,7 +285,9 @@
     "author": "Doyle, Arthur Conan",
     "genre": "fiction",
     "subGenre": "classic",
-    "publisher": "Random House"
+    "publisher": "Random House",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 30,
@@ -237,7 +295,9 @@
     "author": "Doyle, Arthur Conan",
     "genre": "fiction",
     "subGenre": "classic",
-    "publisher": "Random House"
+    "publisher": "Random House",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 31,
@@ -245,7 +305,9 @@
     "author": "Smith, Adam",
     "genre": "science",
     "subGenre": "economics",
-    "publisher": "Random House"
+    "publisher": "Random House",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 32,
@@ -253,7 +315,9 @@
     "author": "Follett, Ken",
     "genre": "fiction",
     "subGenre": "novel",
-    "publisher": "Random House"
+    "publisher": "Random House",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 33,
@@ -261,7 +325,9 @@
     "author": "Hitler, Adolf",
     "genre": "nonfiction",
     "subGenre": "autobiography",
-    "publisher": "Rupa"
+    "publisher": "Rupa",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 34,
@@ -269,7 +335,9 @@
     "author": "Capra, Fritjof",
     "genre": "science",
     "subGenre": "physics",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 35,
@@ -277,7 +345,9 @@
     "author": "Feynman, Richard",
     "genre": "science",
     "subGenre": "physics",
-    "publisher": "Random House"
+    "publisher": "Random House",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 36,
@@ -285,7 +355,9 @@
     "author": "Hemingway, Ernest",
     "genre": "fiction",
     "subGenre": "classic",
-    "publisher": "Rupa"
+    "publisher": "Rupa",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 37,
@@ -293,7 +365,9 @@
     "author": "Forsyth, Frederick",
     "genre": "fiction",
     "subGenre": "novel",
-    "publisher": "Transworld"
+    "publisher": "Transworld",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 38,
@@ -301,7 +375,9 @@
     "author": "Archer, Jeffery",
     "genre": "fiction",
     "subGenre": "novel",
-    "publisher": "Pan"
+    "publisher": "Pan",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 39,
@@ -309,7 +385,9 @@
     "author": "Pausch, Randy",
     "genre": "nonfiction",
     "subGenre": "autobiography",
-    "publisher": "Hyperion"
+    "publisher": "Hyperion",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 40,
@@ -317,7 +395,9 @@
     "author": "Rand, Ayn",
     "genre": "philosophy",
     "subGenre": "objectivism",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 41,
@@ -325,7 +405,9 @@
     "author": "Crichton, Michael",
     "genre": "fiction",
     "subGenre": "novel",
-    "publisher": "Random House"
+    "publisher": "Random House",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 42,
@@ -333,7 +415,9 @@
     "author": "Steinbeck, John",
     "genre": "nonfiction",
     "subGenre": "history",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 43,
@@ -341,7 +425,9 @@
     "author": "Poe, Edgar Allen",
     "genre": "fiction",
     "subGenre": "classic",
-    "publisher": "HarperCollins"
+    "publisher": "HarperCollins",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 44,
@@ -349,7 +435,9 @@
     "author": "Dubner, Stephen",
     "genre": "science",
     "subGenre": "economics",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 45,
@@ -357,7 +445,9 @@
     "author": "Capra, Fritjof",
     "genre": "science",
     "subGenre": "physics",
-    "publisher": "HarperCollins"
+    "publisher": "HarperCollins",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 46,
@@ -365,7 +455,9 @@
     "author": "Durant, Will",
     "genre": "philosophy",
     "subGenre": "history",
-    "publisher": "Pocket"
+    "publisher": "Pocket",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 47,
@@ -373,7 +465,9 @@
     "author": "Deshpande, P L",
     "genre": "fiction",
     "subGenre": "novel",
-    "publisher": "Mauj"
+    "publisher": "Mauj",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 48,
@@ -381,7 +475,9 @@
     "author": "Steinbeck, John",
     "genre": "fiction",
     "subGenre": "classic",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 49,
@@ -389,7 +485,9 @@
     "author": "Steinbeck, John",
     "genre": "nonfiction",
     "subGenre": "history",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 50,
@@ -397,7 +495,9 @@
     "author": "Steinbeck, John",
     "genre": "fiction",
     "subGenre": "classic",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 51,
@@ -405,7 +505,9 @@
     "author": "Grisham, John",
     "genre": "fiction",
     "subGenre": "novel",
-    "publisher": "Random House"
+    "publisher": "Random House",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 52,
@@ -413,7 +515,9 @@
     "author": "Naipaul, V. S.",
     "genre": "fiction",
     "subGenre": "novel",
-    "publisher": "Rupa"
+    "publisher": "Rupa",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 53,
@@ -421,7 +525,9 @@
     "author": "Heller, Joseph",
     "genre": "fiction",
     "subGenre": "classic",
-    "publisher": "Random House"
+    "publisher": "Random House",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 54,
@@ -429,7 +535,9 @@
     "author": "BBC",
     "genre": "nonfiction",
     "subGenre": "trivia",
-    "publisher": "BBC"
+    "publisher": "BBC",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 55,
@@ -437,7 +545,9 @@
     "author": "Dylan, Bob",
     "genre": "nonfiction",
     "subGenre": "autobiography",
-    "publisher": "Random House"
+    "publisher": "Random House",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 56,
@@ -445,7 +555,9 @@
     "author": "Gupta, Madan",
     "genre": "tech",
     "subGenre": "data_science",
-    "publisher": "Elsevier"
+    "publisher": "Elsevier",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 57,
@@ -453,7 +565,9 @@
     "author": "Stonier, Alfred",
     "genre": "tech",
     "subGenre": "economics",
-    "publisher": "Pearson"
+    "publisher": "Pearson",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 58,
@@ -461,7 +575,9 @@
     "author": "Greene, W. H.",
     "genre": "tech",
     "subGenre": "economics",
-    "publisher": "Pearson"
+    "publisher": "Pearson",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 59,
@@ -469,7 +585,9 @@
     "author": "Bradsky, Gary",
     "genre": "tech",
     "subGenre": "signal_processing",
-    "publisher": "O\u0027Reilly"
+    "publisher": "O\u0027Reilly",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 60,
@@ -477,7 +595,9 @@
     "author": "Tanenbaum, Andrew",
     "genre": "tech",
     "subGenre": "computer_science",
-    "publisher": "Prentice Hall"
+    "publisher": "Prentice Hall",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 61,
@@ -485,7 +605,9 @@
     "author": "Forsyth, David",
     "genre": "tech",
     "subGenre": "signal_processing",
-    "publisher": "Pearson"
+    "publisher": "Pearson",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 62,
@@ -493,7 +615,9 @@
     "author": "Taub, Schilling",
     "genre": "tech",
     "subGenre": "signal_processing",
-    "publisher": "TMH"
+    "publisher": "TMH",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 63,
@@ -501,7 +625,9 @@
     "author": "Kanetkar, Yashwant",
     "genre": "tech",
     "subGenre": "computer_science",
-    "publisher": "Prentice Hall"
+    "publisher": "Prentice Hall",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 64,
@@ -509,7 +635,9 @@
     "author": "Stroud, Jonathan",
     "genre": "fiction",
     "subGenre": "novel",
-    "publisher": "Random House"
+    "publisher": "Random House",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 65,
@@ -517,7 +645,9 @@
     "author": "Dostoevsky, Fyodor",
     "genre": "fiction",
     "subGenre": "classic",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 66,
@@ -525,7 +655,9 @@
     "author": "Brown, Dan",
     "genre": "fiction",
     "subGenre": "novel",
-    "publisher": "Random House"
+    "publisher": "Random House",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 67,
@@ -533,7 +665,9 @@
     "author": "Sen, Amartya",
     "genre": "nonfiction",
     "subGenre": "history",
-    "publisher": "Picador"
+    "publisher": "Picador",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 68,
@@ -541,7 +675,9 @@
     "author": "Ghosh, Amitav",
     "genre": "fiction",
     "subGenre": "novel",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 69,
@@ -549,7 +685,9 @@
     "author": "Sen, Amartya",
     "genre": "philosophy",
     "subGenre": "economics",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 70,
@@ -557,7 +695,9 @@
     "author": "Hansberry, Lorraine",
     "genre": "fiction",
     "subGenre": "novel",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 71,
@@ -565,7 +705,9 @@
     "author": "Woodward, Bob",
     "genre": "nonfiction",
     "subGenre": "history",
-    "publisher": "Random House"
+    "publisher": "Random House",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 72,
@@ -573,7 +715,9 @@
     "author": "Archer, Jeffery",
     "genre": "fiction",
     "subGenre": "novel",
-    "publisher": "Pan"
+    "publisher": "Pan",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 73,
@@ -581,7 +725,9 @@
     "author": "Nayar, Kuldip",
     "genre": "nonfiction",
     "subGenre": "history",
-    "publisher": "HarperCollins"
+    "publisher": "HarperCollins",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 74,
@@ -589,7 +735,9 @@
     "author": "Deshpande, Sunita",
     "genre": "nonfiction",
     "subGenre": "autobiography",
-    "publisher": "Mauj"
+    "publisher": "Mauj",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 75,
@@ -597,7 +745,9 @@
     "author": "Dalrymple, William",
     "genre": "nonfiction",
     "subGenre": "history",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 76,
@@ -605,7 +755,9 @@
     "author": "Various",
     "genre": "tech",
     "subGenre": "economics",
-    "publisher": "Springer"
+    "publisher": "Springer",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 77,
@@ -613,7 +765,9 @@
     "author": "Deshpande, P L",
     "genre": "nonfiction",
     "subGenre": "misc",
-    "publisher": "Mauj"
+    "publisher": "Mauj",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 78,
@@ -621,7 +775,9 @@
     "author": "Deshpande, P L",
     "genre": "nonfiction",
     "subGenre": "misc",
-    "publisher": "Mauj"
+    "publisher": "Mauj",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 79,
@@ -629,7 +785,9 @@
     "author": "Deshpande, P L",
     "genre": "nonfiction",
     "subGenre": "misc",
-    "publisher": "Mauj"
+    "publisher": "Mauj",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 80,
@@ -637,7 +795,9 @@
     "author": "Garg, Sanjay",
     "genre": "nonfiction",
     "subGenre": "poetry",
-    "publisher": "Mauj"
+    "publisher": "Mauj",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 81,
@@ -645,7 +805,9 @@
     "author": "",
     "genre": "philosophy",
     "subGenre": "education",
-    "publisher": "HarperCollins"
+    "publisher": "HarperCollins",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 82,
@@ -653,7 +815,9 @@
     "author": "Kale, V P",
     "genre": "nonfiction",
     "subGenre": "misc",
-    "publisher": "Mauj"
+    "publisher": "Mauj",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 83,
@@ -661,7 +825,9 @@
     "author": "Tharoor, Shashi",
     "genre": "nonfiction",
     "subGenre": "history",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 84,
@@ -669,7 +835,9 @@
     "author": "John Doe",
     "genre": "nonfiction",
     "subGenre": "history",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 85,
@@ -677,7 +845,9 @@
     "author": "Tharoor, Shashi",
     "genre": "fiction",
     "subGenre": "novel",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 86,
@@ -685,7 +855,9 @@
     "author": "Lapierre, Dominique",
     "genre": "nonfiction",
     "subGenre": "history",
-    "publisher": "vikas"
+    "publisher": "vikas",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 87,
@@ -693,7 +865,9 @@
     "author": "Lapierre, Dominique",
     "genre": "fiction",
     "subGenre": "novel",
-    "publisher": "vikas"
+    "publisher": "vikas",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 88,
@@ -701,7 +875,9 @@
     "author": "Lapierre, Dominique",
     "genre": "nonfiction",
     "subGenre": "history",
-    "publisher": "vikas"
+    "publisher": "vikas",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 89,
@@ -709,7 +885,9 @@
     "author": "Steinbeck, John",
     "genre": "fiction",
     "subGenre": "classic",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 90,
@@ -717,7 +895,9 @@
     "author": "Russell, Bertrand",
     "genre": "philosophy",
     "subGenre": "education",
-    "publisher": "Routledge"
+    "publisher": "Routledge",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 91,
@@ -725,7 +905,9 @@
     "author": "Harris, Sam",
     "genre": "nonfiction",
     "subGenre": "psychology",
-    "publisher": "FreePress"
+    "publisher": "FreePress",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 92,
@@ -733,7 +915,9 @@
     "author": "Tharoor, Shashi",
     "genre": "nonfiction",
     "subGenre": "history",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 93,
@@ -741,7 +925,9 @@
     "author": "Gardner, Earle Stanley",
     "genre": "fiction",
     "subGenre": "novel",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 94,
@@ -749,7 +935,9 @@
     "author": "Hawking, Stephen",
     "genre": "science",
     "subGenre": "physics",
-    "publisher": "Jaico"
+    "publisher": "Jaico",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 95,
@@ -757,7 +945,9 @@
     "author": "Drucker, Peter",
     "genre": "science",
     "subGenre": "economics",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 96,
@@ -765,7 +955,9 @@
     "author": "Bodanis, David",
     "genre": "science",
     "subGenre": "physics",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 97,
@@ -773,7 +965,9 @@
     "author": "Hugo, Victor",
     "genre": "fiction",
     "subGenre": "classic",
-    "publisher": "Random House"
+    "publisher": "Random House",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 98,
@@ -781,7 +975,9 @@
     "author": "Steinbeck, John",
     "genre": "fiction",
     "subGenre": "classic",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 99,
@@ -789,7 +985,9 @@
     "author": "Drucker, Peter",
     "genre": "nonfiction",
     "subGenre": "economics",
-    "publisher": "Random House"
+    "publisher": "Random House",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 100,
@@ -797,7 +995,9 @@
     "author": "Gordon, Richard",
     "genre": "fiction",
     "subGenre": "novel",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 101,
@@ -805,7 +1005,9 @@
     "author": "Orwell, George",
     "genre": "nonfiction",
     "subGenre": "autobiography",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 102,
@@ -813,7 +1015,9 @@
     "author": "Sen, Amartya",
     "genre": "philosophy",
     "subGenre": "philosophy",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 103,
@@ -821,7 +1025,9 @@
     "author": "Dalrymple, William",
     "genre": "nonfiction",
     "subGenre": "history",
-    "publisher": "Random House"
+    "publisher": "Random House",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 104,
@@ -829,7 +1035,9 @@
     "author": "",
     "genre": "fiction",
     "subGenre": "classic",
-    "publisher": "Jaico"
+    "publisher": "Jaico",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 105,
@@ -837,7 +1045,9 @@
     "author": "Iacoca, Lee",
     "genre": "nonfiction",
     "subGenre": "autobiography",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 106,
@@ -845,7 +1055,9 @@
     "author": "Maugham, William S",
     "genre": "fiction",
     "subGenre": "classic",
-    "publisher": "Vintage"
+    "publisher": "Vintage",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 107,
@@ -853,7 +1065,9 @@
     "author": "Forsyth, Frederick",
     "genre": "fiction",
     "subGenre": "classic",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 108,
@@ -861,7 +1075,9 @@
     "author": "Maugham, William S",
     "genre": "fiction",
     "subGenre": "classic",
-    "publisher": "Vintage"
+    "publisher": "Vintage",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 109,
@@ -869,7 +1085,9 @@
     "author": "Pirsig, Robert",
     "genre": "philosophy",
     "subGenre": "autobiography",
-    "publisher": "Vintage"
+    "publisher": "Vintage",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 110,
@@ -877,7 +1095,9 @@
     "author": "Fisk, Robert",
     "genre": "nonfiction",
     "subGenre": "history",
-    "publisher": "HarperCollins"
+    "publisher": "HarperCollins",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 111,
@@ -885,7 +1105,9 @@
     "author": "Rand, Ayn",
     "genre": "fiction",
     "subGenre": "novel",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 112,
@@ -893,7 +1115,9 @@
     "author": "Aczel, Amir",
     "genre": "science",
     "subGenre": "mathematics",
-    "publisher": "HighStakes"
+    "publisher": "HighStakes",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 113,
@@ -901,7 +1125,9 @@
     "author": "Russell, Bertrand",
     "genre": "philosophy",
     "subGenre": "philosophy",
-    "publisher": "Routledge"
+    "publisher": "Routledge",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 114,
@@ -909,7 +1135,9 @@
     "author": "",
     "genre": "fiction",
     "subGenre": "classic",
-    "publisher": "Jaico"
+    "publisher": "Jaico",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 115,
@@ -917,7 +1145,9 @@
     "author": "Sen, Amartya",
     "genre": "science",
     "subGenre": "economics",
-    "publisher": "Springer"
+    "publisher": "Springer",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 116,
@@ -925,7 +1155,9 @@
     "author": "Huntington, Samuel",
     "genre": "nonfiction",
     "subGenre": "history",
-    "publisher": "Simon\u0026Schuster"
+    "publisher": "Simon\u0026Schuster",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 117,
@@ -933,7 +1165,9 @@
     "author": "Capra, Fritjof",
     "genre": "nonfiction",
     "subGenre": "anthology",
-    "publisher": "Fontana"
+    "publisher": "Fontana",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 118,
@@ -941,7 +1175,9 @@
     "author": "Bach, Richard",
     "genre": "nonfiction",
     "subGenre": "autobiography",
-    "publisher": "Dell"
+    "publisher": "Dell",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 119,
@@ -949,7 +1185,9 @@
     "author": "Marx, Karl",
     "genre": "nonfiction",
     "subGenre": "autobiography",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   },
   {
     "number": 120,
@@ -957,6 +1195,8 @@
     "author": "Braithwaite",
     "genre": "fiction",
     "subGenre": "classic",
-    "publisher": "Penguin"
+    "publisher": "Penguin",
+    "isAvailable": true,
+    "loanCount": 0
   }
 ]

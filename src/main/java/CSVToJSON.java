@@ -49,6 +49,8 @@ public class CSVToJSON {
                             break;
                     }
                 }
+                book.setAvailable(true);
+                book.setLoanCount(0);
                 books.add(book);
             }
 
@@ -74,6 +76,12 @@ public class CSVToJSON {
 
 
 
+// borrowed book
+// isAvailable
+// count for times loaned out
+// update book/csvToJson with changes
+// Add methods for reports
+// create user.json to store user information
 
 
 
@@ -84,21 +92,3 @@ public class CSVToJSON {
 
 
 
-
-//    private static int number;
-//    private static String author;
-//    private static String title;
-//    private static String genre;
-//    private static String subGenre;
-//    private static String publisher;
-//
-//
-//
-//    public static void main(String[] args) {
-//        JSONObject jsonData = new JSONObject();
-//        jsonData.put("Number", number);
-//        jsonData.put("Author", author);
-//        jsonData.put("Genre", genre);
-//        jsonData.put("Sub Genre", subGenre);
-//        jsonData.put("Publisher", publisher);
-//    }

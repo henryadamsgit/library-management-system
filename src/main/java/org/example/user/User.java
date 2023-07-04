@@ -1,6 +1,8 @@
 package org.example.user;
 
 import org.example.Library;
+import org.example.book.Book;
+
 import java.util.Scanner;
 
 public class User {
@@ -8,6 +10,9 @@ public class User {
     private String email;
     private String password;
     private String name;
+    private long libraryNumber;
+    private Book booksBorrowed;
+
 
     public static void main(String[] args) {
         Library library = new Library();
@@ -30,19 +35,15 @@ public class User {
 
         switch (action) {
             case 1:
-                // View books
                 viewBooks();
                 break;
             case 2:
-                // Take a book out on loan
                 loanBook();
                 break;
             case 3:
-                // Just browsing
                 justBrowsing();
                 break;
             case 4:
-                // Leave library
                 leaveLibrary();
                 break;
             default:
@@ -65,15 +66,12 @@ public class User {
 
         switch (option) {
             case 1:
-                // View all books
                 library.viewAllBooks();
                 break;
             case 2:
-                // View available books
               //  library.viewAvailableBooks();
                 break;
             case 3:
-                // View books by category
                 library.viewBooksByCategory();
                 break;
             default:
@@ -84,9 +82,21 @@ public class User {
     }
 
     private void loanBook() {
-        // Implement the logic for loaning a book
-        System.out.println("Loaning a book...");
+        System.out.println("Enter the ID of the book you want to loan (1-120):");
+        Scanner userInput = new Scanner(System.in);
+        int bookId = userInput.nextInt();
+
+        Library library = new Library();
+        Book book = library.getBookById(bookId);
+
+        if (book != null) {
+            System.out.println("You have successfully loaned the book:");
+            System.out.println(book);
+        } else {
+            System.out.println("No book found with the ID: " + bookId);
+        }
     }
+
 
     private void justBrowsing() {
         System.out.println("Okay, enjoy the library!");
@@ -96,8 +106,8 @@ public class User {
         userSelection();
     }
 
-    private void leaveLibrary() {
-        // Implement the logic for leaving the library
+    public void leaveLibrary(){
         System.out.println("Leaving the library...");
+        System.out.println("We hope to see you again");
     }
 }

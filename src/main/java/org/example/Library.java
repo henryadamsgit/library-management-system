@@ -24,19 +24,15 @@ public class Library {
         int choice = userInput.nextInt();
 
         if (choice == 1) {
-            // User operations
             System.out.println("Welcome, User!");
-            // Implement user-related functionality here
             User user = new User();
             user.userSelection();
         } else if (choice == 2) {
-            // Admin operations
             System.out.println("Enter the admin password: ");
             String password = userInput.next();
 
             if (password.equals("abcdefg")) {
                 System.out.println("Welcome, Admin!");
-                // Implement admin-related functionality here
                 Admin admin = new Admin();
                 admin.adminSelection();
             } else {
@@ -114,10 +110,9 @@ public class Library {
     public void getBooksByCategory(String category) {
         try (FileReader fileReader = new FileReader(BOOKS_FILE)) {
             Book[] booksArray = gson.fromJson(fileReader, Book[].class);
-            List<Book> books = Arrays.asList(booksArray);
 
             System.out.println("Books in the category \"" + category + "\":");
-            for (Book book : books) {
+            for (Book book : booksArray) {
                 if (book.getGenre().equalsIgnoreCase(category)) {
                     System.out.println(book);
                 }
@@ -127,7 +122,21 @@ public class Library {
         }
     }
 
+    public Book getBookById(int id) {
+        try (FileReader fileReader = new FileReader(BOOKS_FILE)) {
+            Book[] booksArray = gson.fromJson(fileReader, Book[].class);
+            List<Book> books = Arrays.asList(booksArray);
 
-    public void viewBooksByCategory(String category) {
+            for (Book book : books) {
+                if (book.getNumber() == id) {
+                    return book;
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Error reading books file: " + e.getMessage());
+        }
+
+        return null; // Book with the specified ID was not found
     }
+
 }
