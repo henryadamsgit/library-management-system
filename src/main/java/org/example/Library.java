@@ -7,10 +7,9 @@ import org.example.book.Book;
 import org.example.user.User;
 
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Library {
     private static final String BOOKS_FILE = "books.json";
@@ -49,6 +48,9 @@ public class Library {
             Book[] booksArray = gson.fromJson(fileReader, Book[].class);
             List<Book> books = Arrays.asList(booksArray);
 
+            User user = new User();
+            user.setLoanedBooks(new ArrayList<>(books));
+
             System.out.println("All Books in the Library:");
             for (Book book : books) {
                 System.out.println(book);
@@ -58,9 +60,30 @@ public class Library {
         }
     }
 
+    public List<Book> getAllBooks() {
+        try (FileReader fileReader = new FileReader(BOOKS_FILE)) {
+            Book[] booksArray = gson.fromJson(fileReader, Book[].class);
+            return Arrays.asList(booksArray);
+        } catch (IOException e) {
+            System.out.println("Error reading books file: " + e.getMessage());
+        }
+        return Collections.emptyList();
+    }
+
+
+
     public void viewAvailableBooks() {
-        // Implement the logic to view available books
-        System.out.println("Viewing available books...");
+        System.out.println("All available books:");
+        Library library = new Library();
+        List<Book> booksOnLoan = library.getBooksOnLoan();
+
+        if (booksOnLoan.isEmpty()) {
+            System.out.println("No books are currently on loan.");
+        } else {
+            for (Book book : booksOnLoan) {
+                System.out.println(book);
+            }
+        }
     }
 
     public void viewBooksByCategory() {
@@ -138,5 +161,32 @@ public class Library {
 
         return null; // Book with the specified ID was not found
     }
+
+    public List<Book> getBooksOnLoan() {
+        List<Book> booksOnLoan = new ArrayList<>();
+        try (FileReader fileReader = new FileReader(BOOKS_FILE)) {
+            Book[] booksArray = gson.fromJson(fileReader, Book[].class);
+            List<Book> books = Arrays.asList(booksArray);
+
+            for (Book book : books) {
+                if (!book.isAvailable()) {
+                    booksOnLoan.add(book);
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Error reading books file: " + e.getMessage());
+        }
+
+        return booksOnLoan;
+    }
+
+    public void updateBookData(List<Book> books) {
+        try (FileWriter fileWriter = new FileWriter(BOOKS_FILE)) {
+            gson.toJson(books, fileWriter);
+        } catch (IOException e) {
+            System.out.println("Error writing to books file: " + e.getMessage());
+        }
+    }
+
 
 }

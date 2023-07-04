@@ -85,6 +85,7 @@ public class Book {
     }
 
     public void setLoanCount(int i) {
+        this.loanCount = loanCount;
     }
 
     public void incrementLoanCount() {

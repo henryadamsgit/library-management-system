@@ -74,14 +74,9 @@ public class CSVToJSON {
 
 }
 
-
-
-// borrowed book
-// isAvailable
-// count for times loaned out
-// update book/csvToJson with changes
-// Add methods for reports
+// work out how to update/save data
 // create user.json to store user information
+// on user selection, add sign up or login
 
 
 

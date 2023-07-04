@@ -3,6 +3,7 @@ package org.example.user;
 import org.example.Library;
 import org.example.book.Book;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class User {
@@ -13,12 +14,18 @@ public class User {
     private long libraryNumber;
     private Book booksBorrowed;
 
+    private List<Book> loanedBooks;
+
+    public void setLoanedBooks(List<Book> loanedBooks) {
+        this.loanedBooks = loanedBooks;
+    }
 
     public static void main(String[] args) {
         Library library = new Library();
-        library.viewAllBooks();
+        List<Book> allBooks = library.getAllBooks(); // Get all books in the library
 
         User user = new User();
+        user.setLoanedBooks(allBooks); // Set all books as loaned books
         user.userSelection();
     }
 
@@ -69,7 +76,7 @@ public class User {
                 library.viewAllBooks();
                 break;
             case 2:
-              //  library.viewAvailableBooks();
+                library.viewAvailableBooks();
                 break;
             case 3:
                 library.viewBooksByCategory();
@@ -86,17 +93,36 @@ public class User {
         Scanner userInput = new Scanner(System.in);
         int bookId = userInput.nextInt();
 
-        Library library = new Library();
-        Book book = library.getBookById(bookId);
+        Book book = null;
+
+        if (loanedBooks != null) {
+            for (Book b : loanedBooks) {
+                if (b.getNumber() == bookId) {
+                    book = b;
+                    break;
+                }
+            }
+        }
 
         if (book != null) {
-            System.out.println("You have successfully loaned the book:");
-            System.out.println(book);
+            if (book.isAvailable()) {
+                System.out.println("You have successfully loaned the book:");
+                System.out.println(book);
+                book.setAvailable(false);
+                book.incrementLoanCount();
+                justBrowsing();
+
+                // Update the book data in the JSON file
+                Library library = new Library();
+                library.updateBookData(loanedBooks);
+            } else {
+                System.out.println("SORRY! This book is already out on loan.");
+                loanBook();
+            }
         } else {
             System.out.println("No book found with the ID: " + bookId);
         }
     }
-
 
     private void justBrowsing() {
         System.out.println("Okay, enjoy the library!");
@@ -106,7 +132,7 @@ public class User {
         userSelection();
     }
 
-    public void leaveLibrary(){
+    public void leaveLibrary() {
         System.out.println("Leaving the library...");
         System.out.println("We hope to see you again");
     }

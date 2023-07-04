@@ -1,8 +1,10 @@
 package org.example.admin;
 
 import org.example.Library;
+import org.example.book.Book;
 import org.example.user.User;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Admin {
@@ -46,6 +48,16 @@ public class Admin {
     }
 
     private void runReport() {
+        Library library = new Library();
+        List<Book> booksOnLoan = library.getBooksOnLoan();
+
+        if (booksOnLoan.isEmpty()) {
+            System.out.println("No books are currently on loan.");
+        } else {
+            for (Book book : booksOnLoan) {
+                System.out.println(book);
+            }
+        }
     }
 
     private void viewUsers() {
