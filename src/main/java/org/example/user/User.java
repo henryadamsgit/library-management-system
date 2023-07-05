@@ -39,11 +39,12 @@ public class User {
 
     public void userSelection() {
         System.out.println("What would you like to do today?");
-        System.out.println("1: View our collection of books");
+        System.out.println("1: View the collection of books");
         System.out.println("2: Take a book out on loan");
-        System.out.println("3: Just browsing...");
-        System.out.println("4: Leave library");
-        System.out.println("Please enter your action (1-4):");
+        System.out.println("3: Return a book");
+        System.out.println("4: Just browsing...");
+        System.out.println("5: Leave library");
+        System.out.println("Please enter your action (1-5):");
 
         Scanner userInput = new Scanner(System.in);
         int action = userInput.nextInt();
@@ -56,9 +57,11 @@ public class User {
                 loanBook();
                 break;
             case 3:
+                returnBook();
+            case 4:
                 justBrowsing();
                 break;
-            case 4:
+            case 5:
                 leaveLibrary();
                 break;
             default:
@@ -67,6 +70,7 @@ public class User {
                 break;
         }
     }
+
 
     private void viewBooks() {
         System.out.println("Welcome to our collection, please select a viewing option:");
@@ -112,12 +116,11 @@ public class User {
                         System.out.println(book);
                         book.setAvailable(false);
                         book.incrementLoanCount();
-                        justBrowsing();
 
                         // Update the book data in the JSON file
                         try (FileWriter fileWriter = new FileWriter(BOOKS_FILE)) {
                             gson.toJson(books, fileWriter);
-                            System.out.println("Loan updated successfully.");
+                            justBrowsing();
                         } catch (IOException e) {
                             System.out.println("Error updating book data: " + e.getMessage());
                         }
@@ -132,9 +135,43 @@ public class User {
         }
     }
 
+    private void returnBook() {
+        System.out.println("Enter the ID of the book you want to return (1-120):");
+        Scanner userInput = new Scanner(System.in);
+        int bookId = userInput.nextInt();
 
-    private void justBrowsing() {
-        System.out.println("Okay, enjoy the library!");
+        try (FileReader fileReader = new FileReader(BOOKS_FILE)) {
+            Book[] booksArray = gson.fromJson(fileReader, Book[].class);
+            List<Book> books = new ArrayList<>(Arrays.asList(booksArray));
+
+            for (Book book : books) {
+                if (book.getNumber() == bookId) {
+                    if (!book.isAvailable()) {
+                        System.out.println("You have successfully returned the book:");
+                        System.out.println(book);
+                        book.setAvailable(true);
+
+                        // Update the book data in the JSON file
+                        try (FileWriter fileWriter = new FileWriter(BOOKS_FILE)) {
+                            gson.toJson(books, fileWriter);
+                            justBrowsing();
+                        } catch (IOException e) {
+                            System.out.println("Error updating book data: " + e.getMessage());
+                        }
+                    } else {
+                        System.out.println("SORRY! This book is not on loan.");
+                        returnBook();
+                    }
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Error reading books file: " + e.getMessage());
+        }
+    }
+
+
+    public void justBrowsing() {
+        System.out.println("Feel free to browse the library!");
         System.out.println("Would you like to do anything else? (Y/N)");
 
         Scanner userInput = new Scanner(System.in);

@@ -58,6 +58,8 @@ public class Admin {
                 System.out.println(book);
             }
         }
+        User user = new User();
+        user.justBrowsing();
     }
 
     private void viewUsers() {

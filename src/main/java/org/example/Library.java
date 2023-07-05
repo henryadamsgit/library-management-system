@@ -86,6 +86,7 @@ public class Library {
         }
     }
 
+
     public void viewBooksByCategory() {
         System.out.println("Please select a category:");
         System.out.println("1: Non-Fiction");

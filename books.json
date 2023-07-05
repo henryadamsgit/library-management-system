@@ -6,8 +6,8 @@
     "genre": "tech",
     "subGenre": "signal_processing",
     "publisher": "Wiley",
-    "isAvailable": true,
-    "loanCount": 0
+    "isAvailable": false,
+    "loanCount": 2
   },
   {
     "number": 2,
@@ -26,7 +26,7 @@
     "genre": "tech",
     "subGenre": "mathematics",
     "publisher": "Penguin",
-    "isAvailable": false,
+    "isAvailable": true,
     "loanCount": 1
   },
   {
@@ -446,7 +446,7 @@
     "genre": "science",
     "subGenre": "physics",
     "publisher": "HarperCollins",
-    "isAvailable": false,
+    "isAvailable": true,
     "loanCount": 1
   },
   {
