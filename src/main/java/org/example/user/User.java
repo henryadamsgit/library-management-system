@@ -3,8 +3,16 @@ package org.example.user;
 import org.example.Library;
 import org.example.book.Book;
 
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+
+import static org.example.Library.BOOKS_FILE;
+import static org.example.Library.gson;
 
 public class User {
 
@@ -14,7 +22,7 @@ public class User {
     private long libraryNumber;
     private Book booksBorrowed;
 
-    private List<Book> loanedBooks;
+    private static List<Book> loanedBooks;
 
     public void setLoanedBooks(List<Book> loanedBooks) {
         this.loanedBooks = loanedBooks;
@@ -63,7 +71,7 @@ public class User {
     private void viewBooks() {
         System.out.println("Welcome to our collection, please select a viewing option:");
         System.out.println("1: View all books");
-        System.out.println("2: View available books (not on loan)");
+        System.out.println("2: View unavailable books (out on loan)");
         System.out.println("3: View books by category");
 
         Scanner userInput = new Scanner(System.in);
@@ -93,43 +101,53 @@ public class User {
         Scanner userInput = new Scanner(System.in);
         int bookId = userInput.nextInt();
 
-        Book book = null;
+        try (FileReader fileReader = new FileReader(BOOKS_FILE)) {
+            Book[] booksArray = gson.fromJson(fileReader, Book[].class);
+            List<Book> books = new ArrayList<>(Arrays.asList(booksArray));
 
-        if (loanedBooks != null) {
-            for (Book b : loanedBooks) {
-                if (b.getNumber() == bookId) {
-                    book = b;
-                    break;
+            for (Book book : books) {
+                if (book.getNumber() == bookId) {
+                    if (book.isAvailable()) {
+                        System.out.println("You have successfully loaned the book:");
+                        System.out.println(book);
+                        book.setAvailable(false);
+                        book.incrementLoanCount();
+                        justBrowsing();
+
+                        // Update the book data in the JSON file
+                        try (FileWriter fileWriter = new FileWriter(BOOKS_FILE)) {
+                            gson.toJson(books, fileWriter);
+                            System.out.println("Loan updated successfully.");
+                        } catch (IOException e) {
+                            System.out.println("Error updating book data: " + e.getMessage());
+                        }
+                    } else {
+                        System.out.println("SORRY! This book is already out on loan.");
+                        loanBook();
+                    }
                 }
             }
-        }
-
-        if (book != null) {
-            if (book.isAvailable()) {
-                System.out.println("You have successfully loaned the book:");
-                System.out.println(book);
-                book.setAvailable(false);
-                book.incrementLoanCount();
-                justBrowsing();
-
-                // Update the book data in the JSON file
-                Library library = new Library();
-                library.updateBookData(loanedBooks);
-            } else {
-                System.out.println("SORRY! This book is already out on loan.");
-                loanBook();
-            }
-        } else {
-            System.out.println("No book found with the ID: " + bookId);
+        } catch (IOException e) {
+            System.out.println("Error reading books file: " + e.getMessage());
         }
     }
 
+
     private void justBrowsing() {
         System.out.println("Okay, enjoy the library!");
-        System.out.println("If you need assistance, just press enter.");
+        System.out.println("Would you like to do anything else? (Y/N)");
+
         Scanner userInput = new Scanner(System.in);
-        userInput.nextLine();
-        userSelection();
+        String choice = userInput.nextLine();
+
+        if (choice.equalsIgnoreCase("Y")) {
+            userSelection();
+        } else if (choice.equalsIgnoreCase("N")) {
+            leaveLibrary();
+        } else {
+            System.out.println("Invalid choice. Please try again.");
+            justBrowsing();
+        }
     }
 
     public void leaveLibrary() {

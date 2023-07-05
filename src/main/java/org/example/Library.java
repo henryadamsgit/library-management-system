@@ -12,8 +12,8 @@ import java.io.IOException;
 import java.util.*;
 
 public class Library {
-    private static final String BOOKS_FILE = "books.json";
-    private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    public static final String BOOKS_FILE = "books.json";
+    public static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
     public static void main(String[] args) {
         System.out.println("Welcome to the Library!");
