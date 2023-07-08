@@ -1,3 +1,5 @@
+package org.example;
+
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
 import org.example.book.Book;

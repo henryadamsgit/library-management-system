@@ -72,8 +72,8 @@ public class Library {
 
 
 
-    public void viewAvailableBooks() {
-        System.out.println("All available books:");
+    public void viewUnavailableBooks() {
+        System.out.println("All unavailable books:");
         Library library = new Library();
         List<Book> booksOnLoan = library.getBooksOnLoan();
 
@@ -84,6 +84,8 @@ public class Library {
                 System.out.println(book);
             }
         }
+        User user = new User();
+        user.justBrowsing();
     }
 
 

@@ -16,24 +16,31 @@ import static org.example.Library.gson;
 
 public class User {
 
-    private String email;
     private String password;
-    private String name;
     private long libraryNumber;
     private Book booksBorrowed;
 
     private static List<Book> loanedBooks;
 
+    public User() {
+    }
+
+    public User(long libraryNumber, String password) {
+        this.password = password;
+        this.libraryNumber = libraryNumber;
+    }
+
     public void setLoanedBooks(List<Book> loanedBooks) {
         this.loanedBooks = loanedBooks;
     }
 
+
     public static void main(String[] args) {
         Library library = new Library();
-        List<Book> allBooks = library.getAllBooks(); // Get all books in the library
+        List<Book> allBooks = library.getAllBooks();
 
         User user = new User();
-        user.setLoanedBooks(allBooks); // Set all books as loaned books
+        user.setLoanedBooks(allBooks);
         user.userSelection();
     }
 
@@ -88,7 +95,7 @@ public class User {
                 library.viewAllBooks();
                 break;
             case 2:
-                library.viewAvailableBooks();
+                library.viewUnavailableBooks();
                 break;
             case 3:
                 library.viewBooksByCategory();
@@ -169,6 +176,21 @@ public class User {
         }
     }
 
+    public long getLibraryNumber() {
+        return libraryNumber;
+    }
+
+    public void setLibraryNumber(long libraryNumber) {
+        this.libraryNumber = libraryNumber;
+    }
+
+    public Object getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public void justBrowsing() {
         System.out.println("Feel free to browse the library!");
@@ -191,4 +213,5 @@ public class User {
         System.out.println("Leaving the library...");
         System.out.println("We hope to see you again");
     }
+
 }
