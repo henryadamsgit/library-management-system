@@ -2,5 +2,9 @@
   {
     "password": "password1",
     "libraryNumber": 781500
+  },
+  {
+    "password": "password2",
+    "libraryNumber": 651483
   }
 ]

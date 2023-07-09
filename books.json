@@ -6,7 +6,7 @@
     "genre": "tech",
     "subGenre": "signal_processing",
     "publisher": "Wiley",
-    "isAvailable": false,
+    "isAvailable": true,
     "loanCount": 2
   },
   {
@@ -336,7 +336,7 @@
     "genre": "science",
     "subGenre": "physics",
     "publisher": "Penguin",
-    "isAvailable": false,
+    "isAvailable": true,
     "loanCount": 1
   },
   {
@@ -397,7 +397,7 @@
     "subGenre": "objectivism",
     "publisher": "Penguin",
     "isAvailable": true,
-    "loanCount": 0
+    "loanCount": 1
   },
   {
     "number": 41,

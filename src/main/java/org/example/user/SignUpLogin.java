@@ -7,7 +7,7 @@ import java.util.Random;
 import org.example.JSONFileHandler;
 
 public class SignUpLogin {
-    private static final String USERS_FILE = "users.json";
+    public static final String USERS_FILE = "users.json";
 
     public void signUp() {
         System.out.println("USER SIGN UP");
@@ -24,7 +24,7 @@ public class SignUpLogin {
         try {
             JSONFileHandler<User> jsonFileHandler = new JSONFileHandler<>(USERS_FILE, User.class);
             jsonFileHandler.addObject(user);
-            System.out.println("Signup successful! Please log in.");
+            System.out.println("Signup successful! Welcome!");
         } catch (Exception e) {
             System.out.println("Error signing up: " + e.getMessage());
             e.printStackTrace(); // Print the stack trace

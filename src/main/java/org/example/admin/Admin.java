@@ -53,16 +53,57 @@ public class Admin {
 
         if (booksOnLoan.isEmpty()) {
             System.out.println("No books are currently on loan.");
+            nextAction();
         } else {
             for (Book book : booksOnLoan) {
                 System.out.println(book);
             }
         }
-        User user = new User();
-        user.justBrowsing();
     }
 
     private void viewUsers() {
+        System.out.println("Viewing all users:");
+
+//        try {
+//            JSONFileHandler<User> jsonFileHandler = new JSONFileHandler<>(USERS_FILE, User.class);
+//            List<User> users = jsonFileHandler.getObjects();
+//
+//            for (User user : users) {
+//                System.out.println("Library Number: " + user.getLibraryNumber());
+//                System.out.println("Password: " + user.getPassword());
+//
+//                List<Book> borrowedBooks = getBooksBorrowed(user.getLibraryNumber());
+//                if (!booksBorrowed.isEmpty()) {
+//                    System.out.println("Borrowed Books:");
+//                    for (Book book : borrowedBooks) {
+//                        System.out.println(book);
+//                    }
+//                } else {
+//                    System.out.println("No books currently borrowed.");
+//                }
+//
+//                System.out.println();
+//            }
+//        } catch (Exception e) {
+//            System.out.println("Error retrieving user data: " + e.getMessage());
+//        }
     }
+
+    public void nextAction() {
+        System.out.println("Would you like to do anything else? (Y/N)");
+
+        Scanner userInput = new Scanner(System.in);
+        String choice = userInput.nextLine();
+
+        if (choice.equalsIgnoreCase("Y")) {
+            adminSelection();
+        } else if (choice.equalsIgnoreCase("N")) {
+            leaveLibrary();
+        } else {
+            System.out.println("Invalid choice. Please try again.");
+            nextAction();
+        }
+    }
+
 
 }

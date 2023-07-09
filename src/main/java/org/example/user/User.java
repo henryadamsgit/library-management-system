@@ -166,7 +166,7 @@ public class User {
                             System.out.println("Error updating book data: " + e.getMessage());
                         }
                     } else {
-                        System.out.println("SORRY! This book is not on loan.");
+                        System.out.println("SORRY! This book is not out on loan so can't be returned!");
                         returnBook();
                     }
                 }
