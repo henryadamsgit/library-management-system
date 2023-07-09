@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.example.admin.Admin;
 import org.example.book.Book;
+import org.example.user.SignUpLogin;
 import org.example.user.User;
 
 import java.io.FileReader;
@@ -21,14 +22,24 @@ public class Library {
 
         Scanner userInput = new Scanner(System.in);
         int choice = userInput.nextInt();
+        userInput.nextLine(); // Consume the newline character
 
         if (choice == 1) {
-            System.out.println("Welcome, User!");
+            SignUpLogin auth = new SignUpLogin();
+            System.out.println("Welcome, please login (l) or sign up (s) if you are new.");
+            String option = userInput.nextLine();
+            if (option.equalsIgnoreCase("L")) {
+                auth.login();
+            } else if (option.equalsIgnoreCase("S")) {
+                auth.signUp();
+            } else {
+                System.out.println("Invalid choice. Please try again.");
+            }
             User user = new User();
             user.userSelection();
         } else if (choice == 2) {
             System.out.println("Enter the admin password: ");
-            String password = userInput.next();
+            String password = userInput.nextLine();
 
             if (password.equals("abcdefg")) {
                 System.out.println("Welcome, Admin!");
@@ -42,6 +53,8 @@ public class Library {
             // Handle invalid choice scenario
         }
     }
+
+
 
     public static void viewAllBooks() {
         try (FileReader fileReader = new FileReader(BOOKS_FILE)) {

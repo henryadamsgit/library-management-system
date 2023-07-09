@@ -184,7 +184,7 @@ public class User {
         this.libraryNumber = libraryNumber;
     }
 
-    public Object getPassword() {
+    public String getPassword() {
         return password;
     }
 
