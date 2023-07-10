@@ -7,7 +7,7 @@
     "subGenre": "signal_processing",
     "publisher": "Wiley",
     "isAvailable": true,
-    "loanCount": 2
+    "loanCount": 3
   },
   {
     "number": 2,
@@ -17,7 +17,7 @@
     "subGenre": "data_science",
     "publisher": "Wiley",
     "isAvailable": true,
-    "loanCount": 0
+    "loanCount": 1
   },
   {
     "number": 3,
@@ -37,7 +37,7 @@
     "subGenre": "economics",
     "publisher": "HarperCollins",
     "isAvailable": true,
-    "loanCount": 0
+    "loanCount": 1
   },
   {
     "number": 5,
@@ -47,7 +47,7 @@
     "subGenre": "history",
     "publisher": "Penguin",
     "isAvailable": true,
-    "loanCount": 0
+    "loanCount": 1
   },
   {
     "number": 6,
@@ -66,8 +66,8 @@
     "genre": "nonfiction",
     "subGenre": "history",
     "publisher": "Orient Blackswan",
-    "isAvailable": true,
-    "loanCount": 0
+    "isAvailable": false,
+    "loanCount": 1
   },
   {
     "number": 8,
@@ -986,8 +986,8 @@
     "genre": "nonfiction",
     "subGenre": "economics",
     "publisher": "Random House",
-    "isAvailable": true,
-    "loanCount": 0
+    "isAvailable": false,
+    "loanCount": 1
   },
   {
     "number": 100,
@@ -1091,7 +1091,6 @@
   },
   {
     "number": 110,
-    "title": "Great War for Civilization, The",
     "author": "Fisk, Robert",
     "genre": "nonfiction",
     "subGenre": "history",

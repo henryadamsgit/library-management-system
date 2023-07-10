@@ -2,6 +2,9 @@ package org.example;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
+import com.google.gson.stream.JsonReader;
 import org.example.admin.Admin;
 import org.example.book.Book;
 import org.example.user.SignUpLogin;
@@ -10,6 +13,7 @@ import org.example.user.User;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.StringReader;
 import java.util.*;
 
 public class Library {
@@ -18,11 +22,11 @@ public class Library {
 
     public static void main(String[] args) {
         System.out.println("Welcome to the Library!");
-        System.out.println("Please enter '1' for User access OR '2' for Admin access");
+        System.out.println("Please enter '1' for User access OR '2' for Admin access:");
 
         Scanner userInput = new Scanner(System.in);
         int choice = userInput.nextInt();
-        userInput.nextLine(); // Consume the newline character
+        userInput.nextLine();
 
         if (choice == 1) {
             SignUpLogin auth = new SignUpLogin();
@@ -67,6 +71,7 @@ public class Library {
             System.out.println("All Books in the Library:");
             for (Book book : books) {
                 System.out.println(book);
+                user.justBrowsing();
             }
         } catch (IOException e) {
             System.out.println("Error reading books file: " + e.getMessage());
@@ -89,16 +94,17 @@ public class Library {
         System.out.println("All unavailable books:");
         Library library = new Library();
         List<Book> booksOnLoan = library.getBooksOnLoan();
+        User user = new User();
 
         if (booksOnLoan.isEmpty()) {
             System.out.println("No books are currently on loan.");
+            user.justBrowsing();
         } else {
             for (Book book : booksOnLoan) {
                 System.out.println(book);
+                user.justBrowsing();
             }
         }
-        User user = new User();
-        user.justBrowsing();
     }
 
 
@@ -116,27 +122,21 @@ public class Library {
 
         switch (categoryOption) {
             case 1:
-                // Non-Fiction
                 getBooksByCategory("Non-Fiction");
                 break;
             case 2:
-                // Fiction
                 getBooksByCategory("Fiction");
                 break;
             case 3:
-                // Tech
                 getBooksByCategory("Tech");
                 break;
             case 4:
-                // Science
                 getBooksByCategory("Science");
                 break;
             case 5:
-                // History
                 getBooksByCategory("History");
                 break;
             case 6:
-                // Philosophy
                 getBooksByCategory("Philosophy");
                 break;
             default:
@@ -147,6 +147,7 @@ public class Library {
     }
 
     public void getBooksByCategory(String category) {
+        User user = new User();
         try (FileReader fileReader = new FileReader(BOOKS_FILE)) {
             Book[] booksArray = gson.fromJson(fileReader, Book[].class);
 
@@ -154,10 +155,12 @@ public class Library {
             for (Book book : booksArray) {
                 if (book.getGenre().equalsIgnoreCase(category)) {
                     System.out.println(book);
+                    user.justBrowsing();
                 }
             }
         } catch (IOException e) {
             System.out.println("Error reading books file: " + e.getMessage());
+            user.justBrowsing();
         }
     }
 
@@ -175,7 +178,7 @@ public class Library {
             System.out.println("Error reading books file: " + e.getMessage());
         }
 
-        return null; // Book with the specified ID was not found
+        return null;
     }
 
     public List<Book> getBooksOnLoan() {
@@ -195,6 +198,7 @@ public class Library {
 
         return booksOnLoan;
     }
+
 
     public void updateBookData(List<Book> books) {
         try (FileWriter fileWriter = new FileWriter(BOOKS_FILE)) {

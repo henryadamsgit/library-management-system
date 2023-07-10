@@ -1,13 +1,17 @@
 package org.example.user;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.Random;
 
 import org.example.JSONFileHandler;
+import org.example.book.Book;
 
 public class SignUpLogin {
     public static final String USERS_FILE = "users.json";
+
+    List<Book> booksBorrowed = new ArrayList<>();
 
     public void signUp() {
         System.out.println("USER SIGN UP");
@@ -44,12 +48,10 @@ public class SignUpLogin {
         System.out.print("Password: ");
         String password = userInput.nextLine();
 
-        // Retrieve the user data from the JSON file
         try {
             JSONFileHandler<User> jsonFileHandler = new JSONFileHandler<>(USERS_FILE, User.class);
             List<User> users = jsonFileHandler.getObjects();
 
-            // Find the user with matching library number and password
             for (User user : users) {
                 if (user.getLibraryNumber() == libraryNumber && user.getPassword().equals(password)) {
                     System.out.println("Login successful!");

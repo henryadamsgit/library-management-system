@@ -1,5 +1,6 @@
 package org.example.user;
 
+import org.example.JSONFileHandler;
 import org.example.Library;
 import org.example.book.Book;
 
@@ -13,27 +14,9 @@ import java.util.Scanner;
 
 import static org.example.Library.BOOKS_FILE;
 import static org.example.Library.gson;
+import static org.example.user.SignUpLogin.USERS_FILE;
 
 public class User {
-
-    private String password;
-    private long libraryNumber;
-    private Book booksBorrowed;
-
-    private static List<Book> loanedBooks;
-
-    public User() {
-    }
-
-    public User(long libraryNumber, String password) {
-        this.password = password;
-        this.libraryNumber = libraryNumber;
-    }
-
-    public void setLoanedBooks(List<Book> loanedBooks) {
-        this.loanedBooks = loanedBooks;
-    }
-
 
     public static void main(String[] args) {
         Library library = new Library();
@@ -42,6 +25,55 @@ public class User {
         User user = new User();
         user.setLoanedBooks(allBooks);
         user.userSelection();
+    }
+
+    private String password;
+    private long libraryNumber;
+    private List<Book> booksBorrowed;
+
+    private static List<Book> loanedBooks;
+
+    public User() {
+        this.booksBorrowed = new ArrayList<>();
+    }
+
+    public User(long libraryNumber, String password) {
+        this.libraryNumber = libraryNumber;
+        this.password = password;
+        this.booksBorrowed = new ArrayList<>();
+    }
+
+    public List<Book> getBooksBorrowed() {
+        return booksBorrowed;
+    }
+
+    public void setBooksBorrowed(List<Book> booksBorrowed) {
+        this.booksBorrowed = booksBorrowed;
+    }
+
+
+    public static List<Book> getLoanedBooks() {
+        return loanedBooks;
+    }
+    public void setLoanedBooks(List<Book> loanedBooks) {
+        this.loanedBooks = loanedBooks;
+    }
+
+
+    public long getLibraryNumber() {
+        return libraryNumber;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void addBookBorrowed(Book book) {
+        booksBorrowed.add(book);
+    }
+
+    public void removeBookBorrowed(Book book) {
+        booksBorrowed.remove(book);
     }
 
     public void userSelection() {
@@ -127,6 +159,13 @@ public class User {
                         // Update the book data in the JSON file
                         try (FileWriter fileWriter = new FileWriter(BOOKS_FILE)) {
                             gson.toJson(books, fileWriter);
+
+                            // Add the loaned book to the user's booksBorrowed list
+                            booksBorrowed.add(book);
+
+                            // Update the user's booksBorrowed list in the JSON file
+                            saveUserBooks();
+
                             justBrowsing();
                         } catch (IOException e) {
                             System.out.println("Error updating book data: " + e.getMessage());
@@ -161,12 +200,19 @@ public class User {
                         // Update the book data in the JSON file
                         try (FileWriter fileWriter = new FileWriter(BOOKS_FILE)) {
                             gson.toJson(books, fileWriter);
+
+                            // Remove the returned book from the user's booksBorrowed list
+                            booksBorrowed.remove(book);
+
+                            // Update the user's booksBorrowed list in the JSON file
+                            saveUserBooks();
+
                             justBrowsing();
                         } catch (IOException e) {
                             System.out.println("Error updating book data: " + e.getMessage());
                         }
                     } else {
-                        System.out.println("SORRY! This book is not out on loan so can't be returned!");
+                        System.out.println("SORRY! This book is not out on loan, so it can't be returned!");
                         returnBook();
                     }
                 }
@@ -176,21 +222,25 @@ public class User {
         }
     }
 
-    public long getLibraryNumber() {
-        return libraryNumber;
+    private void saveUserBooks() {
+        try {
+            JSONFileHandler<User> jsonFileHandler = new JSONFileHandler<>(USERS_FILE, User.class);
+            List<User> users = jsonFileHandler.getObjects();
+
+            for (int i = 0; i < users.size(); i++) {
+                User currentUser = users.get(i);
+                if (currentUser.getLibraryNumber() == libraryNumber) {
+                    // Update the user's booksBorrowed list
+                    users.set(i, this);
+                    jsonFileHandler.saveObjects(users);
+                    return;
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("Error saving user books: " + e.getMessage());
+        }
     }
 
-    public void setLibraryNumber(long libraryNumber) {
-        this.libraryNumber = libraryNumber;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 
     public void justBrowsing() {
         System.out.println("Feel free to browse the library!");

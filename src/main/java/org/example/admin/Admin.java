@@ -55,10 +55,13 @@ public class Admin {
             System.out.println("No books are currently on loan.");
             nextAction();
         } else {
+            System.out.println("All books currently on loan:");
             for (Book book : booksOnLoan) {
                 System.out.println(book);
+
             }
         }
+        nextAction();
     }
 
     private void viewUsers() {

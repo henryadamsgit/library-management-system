@@ -17,8 +17,8 @@ public class Book {
         this.genre = genre;
         this.subGenre = subGenre;
         this.publisher = publisher;
-        this.isAvailable = true; // Book is initially available
-        this.loanCount = 0; // Loan count starts from zero
+        this.isAvailable = true;
+        this.loanCount = 0;
     }
 
     public Book() {
