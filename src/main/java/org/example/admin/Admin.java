@@ -1,11 +1,14 @@
 package org.example.admin;
 
+import org.example.JSONFileHandler;
 import org.example.Library;
 import org.example.book.Book;
 import org.example.user.User;
 
 import java.util.List;
 import java.util.Scanner;
+
+import static org.example.user.SignUpLogin.USERS_FILE;
 
 public class Admin {
 
@@ -66,31 +69,30 @@ public class Admin {
 
     private void viewUsers() {
         System.out.println("View library users:");
-        nextAction();
 
-//        try {
-//            JSONFileHandler<User> jsonFileHandler = new JSONFileHandler<>(USERS_FILE, User.class);
-//            List<User> users = jsonFileHandler.getObjects();
-//
-//            for (User user : users) {
-//                System.out.println("Library Number: " + user.getLibraryNumber());
-//                System.out.println("Password: " + user.getPassword());
-//
-//                List<Book> borrowedBooks = getBooksBorrowed(user.getLibraryNumber());
-//                if (!booksBorrowed.isEmpty()) {
-//                    System.out.println("Borrowed Books:");
-//                    for (Book book : borrowedBooks) {
-//                        System.out.println(book);
-//                    }
-//                } else {
-//                    System.out.println("No books currently borrowed.");
-//                }
-//
-//                System.out.println();
-//            }
-//        } catch (Exception e) {
-//            System.out.println("Error retrieving user data: " + e.getMessage());
-//        }
+        try {
+            JSONFileHandler<User> jsonFileHandler = new JSONFileHandler<>(USERS_FILE, User.class);
+            List<User> users = jsonFileHandler.getObjects();
+
+            for (User user : users) {
+                System.out.println("Library Number: " + user.getLibraryNumber());
+                System.out.println("Password: " + user.getPassword());
+
+
+                List<Book> borrowedBooks = user.getBooksBorrowed(user.getLibraryNumber());
+                if (!user.getBooksBorrowed(user.getLibraryNumber()).isEmpty()) {
+                    System.out.println("Borrowed Books:");
+                    for (Book book : borrowedBooks) {
+                        System.out.println(book);
+                    }
+                } else {
+                    System.out.println("This user has no books currently borrowed.");
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("Error retrieving user data: " + e.getMessage());
+        }
+        nextAction();
     }
 
     public void nextAction() {

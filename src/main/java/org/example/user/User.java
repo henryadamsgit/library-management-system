@@ -43,7 +43,7 @@ public class User {
         this.booksBorrowed = new ArrayList<>();
     }
 
-    public List<Book> getBooksBorrowed() {
+    public List<Book> getBooksBorrowed(long libraryNumber) {
         return booksBorrowed;
     }
 
