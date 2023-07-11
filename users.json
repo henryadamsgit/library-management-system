@@ -1,10 +1,17 @@
 [
   {
     "password": "password1",
-    "libraryNumber": 781500
+    "libraryNumber": 781500,
+    "booksBorrowed": []
   },
   {
     "password": "password2",
-    "libraryNumber": 651483
+    "libraryNumber": 651483,
+    "booksBorrowed": []
+  },
+  {
+    "password": "password3",
+    "libraryNumber": 581684,
+    "booksBorrowed": []
   }
 ]

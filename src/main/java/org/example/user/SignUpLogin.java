@@ -31,7 +31,7 @@ public class SignUpLogin {
             System.out.println("Signup successful! Welcome!");
         } catch (Exception e) {
             System.out.println("Error signing up: " + e.getMessage());
-            e.printStackTrace(); // Print the stack trace
+            e.printStackTrace();
         }
     }
 

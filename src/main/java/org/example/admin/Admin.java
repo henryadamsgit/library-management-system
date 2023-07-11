@@ -65,7 +65,8 @@ public class Admin {
     }
 
     private void viewUsers() {
-        System.out.println("Viewing all users:");
+        System.out.println("View library users:");
+        nextAction();
 
 //        try {
 //            JSONFileHandler<User> jsonFileHandler = new JSONFileHandler<>(USERS_FILE, User.class);

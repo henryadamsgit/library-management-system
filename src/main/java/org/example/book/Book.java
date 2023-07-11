@@ -32,16 +32,8 @@ public class Book {
         this.number = number;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public String getAuthor() {
-        return author;
     }
 
     public void setAuthor(String author) {
@@ -56,16 +48,8 @@ public class Book {
         this.genre = genre;
     }
 
-    public String getSubGenre() {
-        return subGenre;
-    }
-
     public void setSubGenre(String subGenre) {
         this.subGenre = subGenre;
-    }
-
-    public String getPublisher() {
-        return publisher;
     }
 
     public void setPublisher(String publisher) {

@@ -71,24 +71,7 @@ public class CSVToJSON {
             e.printStackTrace();
         }
     }
-
-
-
 }
-
-// create user.json to store user information
-// on user selection, add sign up or login
-//1. User Signup, generate them a unique library number
-//2. Enter lib number and password
-//3. Scanner reads input
-//4. Stores number and associated password by writing a new json file
-//5. Updates file with information as an object with key/values
-//6. When user then wants to login, details are available and so is their data, current books, loan history etc.
-
-
-
-
-// allow user to return book
 
 
 
