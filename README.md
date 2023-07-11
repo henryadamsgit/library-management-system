@@ -1,5 +1,8 @@
 # library-management-system
 
+![image](https://github.com/henryadamsgit/library-management-system/assets/119608914/9315bc2a-d3e2-4fb5-a397-3a9a5ca8acea)
+
+
 
 Library Management System
 This project is a library management system built using Java. The system allows users to see what books are available, loan books, and see what books they have loaned. It also allows library admins to run reports on the books that are currently out on loan.
